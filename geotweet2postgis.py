@@ -30,7 +30,7 @@ from psycopg2 import connect
 from optparse import OptionParser
 from pdb import set_trace
 
-p = OptionParser()
+p = OptionParser(usage='usage: %prog [options] username password')
 p.add_option('-g', '--geo', dest='geo', type='string',
              help='The geographic area to fetch tweets from, left,bot,right,top',
              metavar='GEO_SPEC', default='-122.75,36.8,-121.75,37.8')
